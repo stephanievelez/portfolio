@@ -5,7 +5,9 @@ import numpy as np
 import pathlib #you need all 3 requirements.txt
 
 import pathlib #you need all 3 requirements
-
+#adding due to posixerror
+plt = platform.system()
+if plt == 'Windows': pathlib.PosixPath = pathlib.WindowsPath
 temp = pathlib.PosixPath #otherwise you'll be an posixerror
 pathlib.PosixPath = pathlib.PureWindowsPath  #when loading the fastai model
 from django.shortcuts import render
