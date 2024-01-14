@@ -11,7 +11,7 @@ from .model import model
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
-@login_required
+#@login_required
 def myModel(request):
     learner = model.load_learner("alzheimerModel/model/export.pkl")
     if request.method == 'POST':
