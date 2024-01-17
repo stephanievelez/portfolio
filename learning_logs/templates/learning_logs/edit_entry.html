@@ -6,7 +6,7 @@
 {% endblock header %}
 
 {% block content %}
-    <p><a href = "{% url 'learning_logs:topics' topic.id %}"> {{ topic }} </a></p>
+    <p><a href = "{% url 'learning_logs:topic' topic.id %}"> {{ topic }} </a></p>
     
     <p> Edit entry:</p>
     <form action = "{% url 'learning_logs:edit_entry' entry.id %}" method = 'post' class="form">
@@ -19,7 +19,7 @@
 
     <div class="col-md-4">
 
-                    <img src="{{ topic_image.topic_Img.url }}" class="img-responsive" style="width: 100%; float: left; margin-right: 10px;" />
+                    <img src="{{ entry.topic_Img.url }}" class="img-responsive" style="width: 100%; float: left; margin-right: 10px;" />
             </div>
 
 {% endblock content %}

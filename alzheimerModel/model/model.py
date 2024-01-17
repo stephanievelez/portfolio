@@ -6,12 +6,12 @@ import pathlib #you need all 3 requirements.txt
 
 
 #adding due to posixerror
-posix_backup = pathlib.PosixPath
-try:
-    pathlib.PosixPath = pathlib.WindowsPath
-    learn_inf = load_learner(EXPORT_PATH)
-finally:
-    pathlib.PosixPath = posix_backup
+#posix_backup = pathlib.PosixPath
+# try:
+#     pathlib.PosixPath = pathlib.WindowsPath
+#     learn_inf = load_learner(EXPORT_PATH)
+# finally:
+#     pathlib.PosixPath = posix_backup
 
 temp = pathlib.PosixPath #otherwise you'll be an posixerror
 pathlib.PosixPath = pathlib.PureWindowsPath  #when loading the fastai model

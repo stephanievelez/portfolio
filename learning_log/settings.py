@@ -43,8 +43,6 @@ INSTALLED_APPS = [
     #to help predict the model
     'fastai',
     
-    #to import and export csv and json files
-    'import_export',
     
     #My apps
     'learning_logs',
@@ -90,15 +88,23 @@ WSGI_APPLICATION = 'learning_log.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql', #using railway
+#         # 'NAME': BASE_DIR / 'db.sqlite3',
+#         'NAME': 'railway',
+#         'USER': 'postgres',
+#         'PASSWORD': 'bbGbDfba*fA5*eDd4aCFdaF4c1EG2DFe',
+#         'HOST': 'roundhouse.proxy.rlwy.net',
+#         'PORT': '48325',
+#     }
+# }
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql', #using railway
-        # 'NAME': BASE_DIR / 'db.sqlite3',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'bbGbDfba*fA5*eDd4aCFdaF4c1EG2DFe',
-        'HOST': 'roundhouse.proxy.rlwy.net',
-        'PORT': '48325',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 

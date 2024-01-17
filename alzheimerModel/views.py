@@ -33,7 +33,7 @@ def myModel(request):
 #         return render(request, 'alzheimerModel/success.html', {"images": image })
 
 
-@login_required
+#@login_required
 def make_prediction(request):
     """get the scoring parameters entered in the uploaded image and return the prediction"""
     learner = model.load_learner("alzheimerModel/model/export.pkl") #this might change location once we deploy
